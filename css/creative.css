@@ -229,6 +229,25 @@ header.masthead p {
   max-width: 400px;
 }
 
+#services {
+  position: relative;
+  z-index: 1;
+}
+
+#services:after {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url(../img/landing-image-background-4.jpg) center center no-repeat;
+  background-size: cover;
+  opacity: .3;
+}
+
 .portfolio-box {
   position: relative;
   display: block;
