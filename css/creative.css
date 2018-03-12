@@ -252,6 +252,25 @@ header.masthead p {
   opacity: .3;
 }
 
+#subbrice {
+  position: relative;
+  z-index: 1;
+}
+
+#subbrice:after {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url(../img/background-image-2.jpg) center center no-repeat;
+  background-size: cover;
+  opacity: .3;
+}
+
 .portfolio-box {
   position: relative;
   display: block;

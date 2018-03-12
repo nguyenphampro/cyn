@@ -354,7 +354,6 @@ baonguyenyam.blogspot.com
   </section>
 
 
-
   <section id="contact">
     <div class="container">
       <div class="row">
@@ -367,9 +366,57 @@ baonguyenyam.blogspot.com
           <p class="mb-5">Chúng tôi không chỉ là nhiếp ảnh gia chuyên nghiệp mà còn là giảng viên đồ họa tại trường FPT danh giá, ngoài ra
             còn là nhà thiết kế sản phẩm cho các tập đoàn lớn tại VN cũng như Nhật, Hàn, Singapore như: KinhDo, Sacombank,
             Novaland, 4xLabs, Freesales, Shinway...</p>
-            <p class="lead text-success mb-5">Nhận dịch vụ trên toàn quốc</p>
+          <p class="lead text-success mb-5">Nhận dịch vụ trên toàn quốc</p>
         </div>
       </div>
+      
+    </div>
+  </section>
+
+
+  <section id="subbrice">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p>
+            <img src="./img/love.png" alt="">
+          </p>
+          <h2 class="section-heading">Subscribe</h2>
+          <hr class="my-4">
+          <div class="contact-form">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="text-center mb-3">
+                  <input class="form-control" id="name" required type="text" name="your-name" placeholder="Tên">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="text-center mb-3">
+                  <input class="form-control" id="contact-email" required type="email" name="your-email" placeholder="Email">
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mb-3">
+              <input class="form-control" id="subject" type="text" required name="your-subject" placeholder="Tiêu đề">
+            </div>
+            <div class="text-center mb-3">
+              <textarea class="form-control" id="message" required name="your-message" placeholder="Nội dung"></textarea>
+            </div>
+            <div class="text-center mb-5 g-recaptcha" data-sitekey="6LeBCkwUAAAAAJkIqW5vlrMLsEgPAUAmQK8ajrbA"></div>
+            <div class="text-center">
+              <input class="btn btn-primary btn-xl" type="submit" onClick="SendMail()" value="   Gửi yêu cầu   ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="social">
+    <div class="container">
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
           <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
@@ -409,6 +456,8 @@ baonguyenyam.blogspot.com
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115297807-1"></script>
   <script>
