@@ -250,6 +250,7 @@ header.masthead p {
   background: url(../img/landing-image-background-4.jpg) center center no-repeat;
   background-size: cover;
   opacity: .3;
+  background-attachment: fixed;
 }
 
 #subbrice {
@@ -269,6 +270,7 @@ header.masthead p {
   background: url(../img/background-image-2.jpg) center center no-repeat;
   background-size: cover;
   opacity: .3;
+  background-attachment: fixed;
 }
 
 .portfolio-box {
