@@ -1,9 +1,21 @@
 // Styling for the portfolio section
-.portfolio-box {
+.portfolio-box, .span1 {
   position: relative;
   display: block;
   max-width: 650px;
   margin: 0 auto;
+  // max-height: 260px;
+  a{
+    // height: 260px;
+    display: block;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform:  translateX(-50%) translateY(-50%)
+    img {
+      width: 100%
+    }
+  }
   .portfolio-box-caption {
     position: absolute;
     bottom: 0;
