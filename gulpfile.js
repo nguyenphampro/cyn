@@ -87,8 +87,8 @@ gulp.task('css:minify', ['css:compile'], function () {
     './css/*.css',
     '!./css/*.min.css'
   ])
-    .pipe(csscomb())
-    .pipe(cleanCSS())
+    // .pipe(csscomb())
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(rename({
       suffix: '.min'
     }))
