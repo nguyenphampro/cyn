@@ -47,6 +47,12 @@ gulp.task('vendor', function () {
     '!./node_modules/jquery/dist/core.js'
   ])
     .pipe(gulp.dest('./vendor/jquery'))
+  // k-gmaps
+  gulp.src([
+    './bower_components/k-gmaps/dist/js/*.js',
+    '!./bower_components/k-gmaps/dist/js/*.map'
+  ])
+    .pipe(gulp.dest('./vendor/k-gmaps'))
 
   // jQuery Easing
   gulp.src([
@@ -74,10 +80,7 @@ gulp.task('css:compile', function () {
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+    
     .pipe(gulp.dest('./css'))
 });
 
@@ -87,7 +90,11 @@ gulp.task('css:minify', ['css:compile'], function () {
     './css/*.css',
     '!./css/*.min.css'
   ])
-    // .pipe(csscomb())
+    .pipe(csscomb())
+    .pipe(autoprefixer({
+      browsers: ['last 20 versions'],
+      // cascade: false
+    }))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(rename({
       suffix: '.min'

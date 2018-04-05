@@ -10,6 +10,13 @@ body {
   @include serif-font;
 }
 
+#map {
+      height: 400px;
+      width: 100%;
+      border-bottom: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+    }
+
 hr {
   max-width: 50px;
   border-width: 3px;
@@ -150,5 +157,32 @@ img::-moz-selection {
         }
       }
     }
+  }
+}
+
+
+#social{
+  // background: url('../img/bgi.jpg') top right no-repeat;
+  //   background-size: cover;
+  //   background-attachment: fixed;
+  //   opacity: .3;
+  padding: 10rem 0;
+    position: relative;
+  z-index: 1;
+  &:after {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+  background: url('../img/bgi.jpg') top right no-repeat;
+    background-size: cover;
+    opacity: .5;
+    background-attachment: fixed;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
   }
 }

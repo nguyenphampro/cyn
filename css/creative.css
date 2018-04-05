@@ -11,6 +11,13 @@ body {
   font-family: 'Andika', 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+#map {
+  height: 400px;
+  width: 100%;
+  border-bottom: 1px solid #e4e4e4;
+  border-top: 1px solid #e4e4e4;
+}
+
 hr {
   max-width: 50px;
   border-width: 3px;
@@ -24,6 +31,7 @@ hr.light {
 a {
   color: #39343A;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -72,11 +80,6 @@ section {
   text-shadow: none;
 }
 
-img::-moz-selection {
-  color: #fff;
-  background: transparent;
-}
-
 img::selection {
   color: #fff;
   background: transparent;
@@ -96,20 +99,10 @@ img::-moz-selection {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -119,17 +112,9 @@ img::-moz-selection {
 
 .js-flickr-gallery .pagination {
   text-align: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -157,11 +142,35 @@ img::-moz-selection {
   }
 }
 
+#social {
+  padding: 10rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+#social:after {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url("../img/bgi.jpg") top right no-repeat;
+  background-size: cover;
+  opacity: .5;
+  background-attachment: fixed;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
   font-family: 'Andika', 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -242,6 +251,9 @@ header.masthead {
   padding-bottom: calc(10rem - 56px);
   background-image: url("../img/cyn.jpg");
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -369,6 +381,7 @@ header.masthead p {
   color: #fff;
   background: rgba(57, 52, 58, 0.9);
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -376,7 +389,6 @@ header.masthead p {
   position: absolute;
   top: 50%;
   width: 100%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center;
 }
@@ -443,6 +455,5 @@ header.masthead p {
 }
 
 .btn-primary:active, .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
